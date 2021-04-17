@@ -1,12 +1,12 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 
-const card = (img, i) => {
+const card = ({image, name}, i) => {
     return (
         <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={img} fluid/>
+            <Card.Img variant="top" src={image}/>
             <Card.Body>
-                <Card.Title>Card Title {i}</Card.Title>
+                <Card.Title>{name}</Card.Title>
             </Card.Body>
         </Card>
     )

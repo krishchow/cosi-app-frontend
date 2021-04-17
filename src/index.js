@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from './components/header'
 import Service from './components/service'
-import About from './components/about'
+import Upload from './components/upload'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,7 +15,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/service" component={Service} />
-        <Route path="/about" component={About} />
+        <Route path="/upload" component={Upload} />
         
       </Switch>
     </Router>
