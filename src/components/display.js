@@ -4,10 +4,12 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 const display = (images) => {
     const eles = images.map((v, i) => {
-        return <Row key={i}><Col className="d-flex justify-content-center">{card(v, i)}</Col></Row>;
+        return <Col className="d-flex justify-content-center" key={i}>{card(v, i)}</Col>;
     });
     return <Container fluid>
-        {eles}
+        <Row>
+            {eles}
+        </Row>
     </Container>
 }
 

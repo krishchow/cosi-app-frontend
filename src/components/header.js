@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Nav, Image } from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 
 const header = () => {
@@ -7,12 +7,12 @@ const header = () => {
         <Navbar bg="light" expand="lg">
             <LinkContainer to="/">
                 <Navbar.Brand>
-                    <Image height="50em" src="/header.png"></Image>
+                    COSI-Demo
                 </Navbar.Brand>
             </LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
+            <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+                <Nav>
                     {/* <LinkContainer to="/service">
                         <Nav.Link>Service</Nav.Link>
                     </LinkContainer> */}

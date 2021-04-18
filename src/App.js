@@ -9,13 +9,13 @@ const axios = require('axios').default;
 
 function App() {
   const [data, setData] = useState({images: []});
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState("");
 
   useEffect(() => {
     axios.post('http://localhost:3001/images', {})
       .then(response => {
         setData({images: response.data.images});
-        setPage(response.data.currentPage);
+        setPage(response.data.lastItem);
       });
   }, []);
 
@@ -25,11 +25,11 @@ function App() {
       return
     }
 
-    axios.post('http://localhost:3001/images', {page: page+1})
+    axios.post('http://localhost:3001/images', {lastItem: page})
       .then(response => {
         const nd = data.images.concat(response.data.images);
         setData({images: nd});
-        setPage(response.data.currentPage);
+        setPage(response.data.lastItem);
       }).catch(err => {
         console.log('hit end');
       });
